@@ -54,6 +54,7 @@ class SubscriptionController extends Controller
         $basic = ModelsPlan::whereName( 'basic')->first();
         $professional = ModelsPlan::whereName('professional')->first();
         $enterprise = ModelsPlan::whereName( 'enterprise')->first();
+
         return view('stripe.plans', compact('basic', 'professional', 'enterprise'));
     }
 
